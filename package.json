@@ -15,13 +15,14 @@
         "url": "https://github.com/Drete457/web-basic-functions.git"
     },
     "files": [
-        "dist"
+        "dist/*",
+        "src/*"
     ],
     "main": "./dist/web-basic-functions.umd.cjs",
-    "module": "./dist/web-basic-functions.js",
+    "module": "./dist/web-basic-functions.es.js",
     "exports": {
         ".": {
-            "import": "./dist/web-basic-functions.js",
+            "import": "./dist/web-basic-functions.es.js",
             "require": "./dist/web-basic-functions.umd.cjs"
         }
     },
@@ -31,6 +32,12 @@
         "pretty": "prettier --write \"src/**/*.{css,js,json,ts,tsx}\"",
         "update": "yarn-upgrade-all"
     },
+    "keywords": [
+        "frontend",
+        "web-function",
+        "front-end",
+        "basic-functions"
+    ],
     "dependencies": {
         "autoprefixer": "^10.4.0",
         "np": "^7.6.2",

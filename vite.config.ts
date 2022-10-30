@@ -22,11 +22,9 @@ export default ({ mode }) => {
         },
         build: {
             lib: {
-                // Could also be a dictionary or array of multiple entry points
-                entry: path.resolve(__dirname, 'src/lib/index.ts'),
+                entry: path.resolve(__dirname, 'src/lib/index.js'),
                 name: 'web-basic-functions',
-                // the proper extensions will be added
-                fileName: 'web-basic-functions',
+                fileName: format => `web-basic-functions.${format}.js`,
             },
             chunkSizeWarningLimit: 350,
             minify: 'esbuild',
