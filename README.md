@@ -23,6 +23,7 @@ cd web-basic-functions
 yarn install
 yarn dev - to run application
 yarn build - to generate the package in the dist folder
+np - to publish the package
 ```
 
 ## Documentation
