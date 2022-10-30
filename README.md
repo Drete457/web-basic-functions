@@ -33,7 +33,7 @@ yarn build - to generate the package in the dist folder
 
 | Package                                           | Version                                                                                                       |
 | ------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| [vite](https://www.npmjs.com/package/vite)                             | ![vite version](https://img.shields.io/npm/v/vite.svg)                                      |
+| [vite](https://www.npmjs.com/package/vite)                             | [![vite version](https://img.shields.io/npm/v/vite.svg)](https://www.npmjs.com/package/vite)                                      |
 [TypeScript](https://www.typescriptlang.org/) | [![TypeScript Version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/typescript)
 | [ReactJs](https://reactjs.org/)         | [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
 
