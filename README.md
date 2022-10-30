@@ -1,11 +1,12 @@
 <p align="center">
-  <a href=" " target="_blank" rel="noopener noreferrer">
+  <a href="https://www.npmjs.com/package/web-basic-functions" target="_blank" rel="noopener noreferrer">
     <img width="180" src="./src/assets/logo-no-background.png" alt="Web Basic Functions logo">
   </a>
 </p>
 <br/>
 
 # Web-Basic-Functions
+[![npm version](https://badge.fury.io/js/web-basic-functions.svg)](https://badge.fury.io/js/web-basic-functions)
 
 ## Description
 
