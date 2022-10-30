@@ -6,12 +6,12 @@
     "description": "Basic Functions for Front-End Development",
     "author": {
         "name": "Filipe Mota",
-        "github": ""
+        "github": "https://github.com/Drete457"
     },
     "copyright": "Filipe Mota",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/Drete457/web-basic-functions.git"
     },
     "type": "module",
     "files": [
