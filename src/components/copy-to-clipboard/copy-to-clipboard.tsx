@@ -14,6 +14,7 @@ const CopyToClipboard: React.FC = () => {
 
     return (
         <section>
+            <h1>Copy string to clipboard</h1>
             <input
                 type="text"
                 value={copyToClipboardInput}

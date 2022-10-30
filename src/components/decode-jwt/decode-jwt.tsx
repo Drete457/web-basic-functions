@@ -4,7 +4,7 @@ import './style.css';
 
 const DecodeJwt: React.FC = () => {
     const [jwt, setJwt] = useState<string>(
-        'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUZXN0ZSBKd3QgdGVzdGVyIiwiaWF0IjoxNjY3MTY2Nzk4LCJleHAiOjE5MTk2Mjc1OTgsImF1ZCI6Ind3dy5leGFtcGxlLmNvbSIsInN1YiI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJHaXZlbk5hbWUiOiJKb2hubnkiLCJTdXJuYW1lIjoiUm9ja2V0IiwiRW1haWwiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl19.Nx2lIUeahck22yzIohG5iC9TZwr0HTGTnR7snGfVBSY',
+        'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUZXN0ZSBKd3QgdGVzdGVyIiwiaWF0IjoxNjY3MTY2Nzk4LCJleHAiOjE5MTk2Mjc1OTgsImF1ZCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9EcmV0ZTQ1Ny93ZWItYmFzaWMtZnVuY3Rpb25zIiwic3ViIjoianJvY2tldEB3ZWItYmFzaWMtZnVuY3Rpb25zLmNvbSIsIkZpcnN0TmFtZSI6IkRyZXRlIiwiU3VyTmFtZSI6IjQ1NyIsIkVtYWlsIjoianJvY2tldEB3ZWItYmFzaWMtZnVuY3Rpb25zLmNvbSIsIlJvbGUiOlsiTm90aGluZ0NFTyIsIkp1bmlvck5vb2IiXX0.s0rd827EApXozo2eWJ4foeERu5xIThTFnv-VDAWZHh0',
     );
     const [decodedJwt, setDecodedJwt] = useState<string>('');
 
@@ -22,7 +22,7 @@ const DecodeJwt: React.FC = () => {
 
     return (
         <div>
-            <h2>Decode JWT</h2>
+            <h2>Valid and Decode JWT</h2>
             <textarea
                 className="textArea"
                 rows={20}

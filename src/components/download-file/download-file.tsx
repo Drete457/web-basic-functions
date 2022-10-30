@@ -13,6 +13,7 @@ const handleDownloadFile = () => {
 
 const DownloadFile: React.FC = () => (
     <section>
+        <h1>Download test file</h1>
         <button type="button" onClick={handleDownloadFile}>
             Download file test
         </button>
