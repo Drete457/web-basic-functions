@@ -1,3 +1,3 @@
-import { downloadFile } from './common';
+import { downloadFile, copyToClipboard } from './common';
 
-export { downloadFile };
+export { downloadFile, copyToClipboard };
