@@ -14,7 +14,6 @@
         "type": "git",
         "url": "https://github.com/Drete457/web-basic-functions.git"
     },
-    "type": "module",
     "files": [
         "dist"
     ],

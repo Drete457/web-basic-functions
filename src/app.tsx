@@ -1,24 +1,12 @@
-import { downloadFile } from './lib/common';
+import { CopyToClipboardComponent } from './components/copy-to-clipboard';
+import { DownloadFileComponent } from './components/download-file';
 
-const handleDownloadFile = () => {
-    const fileName = 'test_file';
-    const fileContent = 'test_content';
-    const file = new File([fileContent], fileName, {
-        type: 'text/plain',
-    });
+const App: React.FC = () => (
+    <main>
+        <DownloadFileComponent />
 
-    const url = URL.createObjectURL(file);
-    downloadFile({ downloadUrl: url, fileName });
-};
-
-const App: React.FC = () => {
-    return (
-        <main>
-            <button type="button" onClick={handleDownloadFile}>
-                Download file test
-            </button>
-        </main>
-    );
-};
+        <CopyToClipboardComponent />
+    </main>
+);
 
 export default App;
