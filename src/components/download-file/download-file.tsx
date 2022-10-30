@@ -1,4 +1,4 @@
-import { downloadFile } from '@/lib/common';
+import { downloadFile } from '@/lib';
 
 const handleDownloadFile = () => {
     const fileName = 'test_file';

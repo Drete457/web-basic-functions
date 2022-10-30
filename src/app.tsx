@@ -1,5 +1,6 @@
 import { ConvertHtmlToStringComponent } from './components/convert-html-to-string';
 import { CopyToClipboardComponent } from './components/copy-to-clipboard';
+import { DecodedJwtComponent } from './components/decode-jwt';
 import { DownloadFileComponent } from './components/download-file';
 
 const App: React.FC = () => (
@@ -9,6 +10,8 @@ const App: React.FC = () => (
         <CopyToClipboardComponent />
         <hr />
         <ConvertHtmlToStringComponent />
+        <hr />
+        <DecodedJwtComponent />
     </main>
 );
 

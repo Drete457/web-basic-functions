@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { copyToClipboard } from '@/lib/common';
+import { copyToClipboard } from '@/lib';
 
 const CopyToClipboard: React.FC = () => {
     const [copyToClipboardInput, setCopyToClipboardInput] =

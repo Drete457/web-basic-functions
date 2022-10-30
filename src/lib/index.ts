@@ -1,3 +1,15 @@
-import { downloadFile, copyToClipboard, convertHtmlToString } from './common';
+import {
+    downloadFile,
+    copyToClipboard,
+    convertHtmlToString,
+    decodeJwt,
+    validToken,
+} from './common';
 
-export { downloadFile, copyToClipboard, convertHtmlToString };
+export {
+    downloadFile,
+    copyToClipboard,
+    convertHtmlToString,
+    decodeJwt,
+    validToken,
+};
