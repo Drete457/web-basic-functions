@@ -22,7 +22,7 @@ export default ({ mode }) => {
         },
         build: {
             lib: {
-                entry: path.resolve(__dirname, 'src/lib/index.js'),
+                entry: path.resolve(__dirname, 'src/lib/index.ts'),
                 name: 'web-basic-functions',
                 fileName: format => `web-basic-functions.${format}.js`,
             },
