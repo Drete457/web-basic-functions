@@ -23,7 +23,7 @@ export default ({ mode }) => {
         build: {
             lib: {
                 // Could also be a dictionary or array of multiple entry points
-                entry: path.resolve(__dirname, 'src/lib/index.js'),
+                entry: path.resolve(__dirname, 'src/lib/index.ts'),
                 name: 'web-basic-functions',
                 // the proper extensions will be added
                 fileName: 'web-basic-functions',

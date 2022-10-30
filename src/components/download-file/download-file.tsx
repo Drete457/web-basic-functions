@@ -11,14 +11,12 @@ const handleDownloadFile = () => {
     downloadFile({ downloadUrl: url, fileName });
 };
 
-const DownloadFile: React.FC = () => {
-    return (
-        <section>
-            <button type="button" onClick={handleDownloadFile}>
-                Download file test
-            </button>
-        </section>
-    );
-};
+const DownloadFile: React.FC = () => (
+    <section>
+        <button type="button" onClick={handleDownloadFile}>
+            Download file test
+        </button>
+    </section>
+);
 
 export default DownloadFile;
