@@ -11,7 +11,7 @@ const validToken = (token: string): boolean => {
     if (typeof token !== 'string') return false;
 
     const tokenDecoded = decodeJwt(token);
-    const { exp } = tokenDecoded;
+    const { exp } = tokenDecoded as { exp: number };
 
     if (tokenDecoded && exp && !isExpired(Number(exp))) return true;
 

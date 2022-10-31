@@ -1,4 +1,4 @@
-const decodeJwt = (token: string): { [key: string]: string } => {
+const decodeJwt = (token: string): object => {
     if (typeof token !== 'string') return { result: '' };
 
     const base64Url = token?.split('.')[1];

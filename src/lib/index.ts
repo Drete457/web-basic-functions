@@ -4,6 +4,7 @@ import {
     convertHtmlToString,
     decodeJwt,
     validToken,
+    sortListObject,
 } from './common';
 
 export {
@@ -12,4 +13,5 @@ export {
     convertHtmlToString,
     decodeJwt,
     validToken,
+    sortListObject,
 };
