@@ -1,0 +1,8 @@
+.resize {
+    resize: both;
+    overflow: auto;
+    width: 10rem;
+    height: 10rem;
+    border: 0.1rem solid;
+    margin: 1rem
+}

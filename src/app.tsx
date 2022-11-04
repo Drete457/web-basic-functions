@@ -2,6 +2,7 @@ import { ConvertHtmlToStringComponent } from './components/convert-html-to-strin
 import { CopyToClipboardComponent } from './components/copy-to-clipboard';
 import { DecodedJwtComponent } from './components/decode-jwt';
 import { DownloadFileComponent } from './components/download-file';
+import { GetElementSizeAndPosition } from './components/get-element-size-and-position.tsx';
 import { SortListObjectComponent } from './components/sort-list-object';
 
 const App: React.FC = () => (
@@ -15,6 +16,8 @@ const App: React.FC = () => (
         <DecodedJwtComponent />
         <hr />
         <SortListObjectComponent />
+        <hr />
+        <GetElementSizeAndPosition />
     </main>
 );
 
