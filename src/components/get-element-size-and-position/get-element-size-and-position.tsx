@@ -1,5 +1,5 @@
 import { LegacyRef, useRef, useState } from 'react';
-import { getElementSizeAndPosition } from '@/lib/common';
+import { getElementSizeAndPosition } from '@/lib';
 import './style.css';
 
 enum ElementPosition {
@@ -41,7 +41,11 @@ const GetElementSizeAndPosition: React.FC = () => {
             <button type="button" onClick={handleResizeInformation}>
                 Size and Position of the element
             </button>
-            <button type="button" onClick={handleElementPosition}>
+            <button
+                type="button"
+                onClick={handleElementPosition}
+                className="move-button"
+            >
                 Move element to the other side
             </button>
             <section dir={positionOfTheElement}>

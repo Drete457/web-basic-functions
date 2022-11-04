@@ -1,23 +1,56 @@
-import { ConvertHtmlToStringComponent } from './components/convert-html-to-string';
-import { CopyToClipboardComponent } from './components/copy-to-clipboard';
-import { DecodedJwtComponent } from './components/decode-jwt';
-import { DownloadFileComponent } from './components/download-file';
-import { GetElementSizeAndPosition } from './components/get-element-size-and-position.tsx';
-import { SortListObjectComponent } from './components/sort-list-object';
+import { lazy } from 'react';
 
+const ConvertHtmlToStringComponentView = lazy(() =>
+    import('./components/convert-html-to-string').then(
+        ({ ConvertHtmlToStringComponent }) => ({
+            default: ConvertHtmlToStringComponent,
+        }),
+    ),
+);
+const CopyToClipboardComponentView = lazy(() =>
+    import('./components/copy-to-clipboard').then(
+        ({ CopyToClipboardComponent }) => ({
+            default: CopyToClipboardComponent,
+        }),
+    ),
+);
+const DecodedJwtComponentView = lazy(() =>
+    import('./components/decode-jwt').then(({ DecodedJwtComponent }) => ({
+        default: DecodedJwtComponent,
+    })),
+);
+const DownloadFileComponentView = lazy(() =>
+    import('./components/download-file').then(({ DownloadFileComponent }) => ({
+        default: DownloadFileComponent,
+    })),
+);
+const SortListObjectComponentView = lazy(() =>
+    import('./components/sort-list-object').then(
+        ({ SortListObjectComponent }) => ({
+            default: SortListObjectComponent,
+        }),
+    ),
+);
+const GetElementSizeAndPositionView = lazy(() =>
+    import('./components/get-element-size-and-position').then(
+        ({ GetElementSizeAndPositionComponent }) => ({
+            default: GetElementSizeAndPositionComponent,
+        }),
+    ),
+);
 const App: React.FC = () => (
     <main>
-        <DownloadFileComponent />
+        <DownloadFileComponentView />
         <hr />
-        <CopyToClipboardComponent />
+        <CopyToClipboardComponentView />
         <hr />
-        <ConvertHtmlToStringComponent />
+        <ConvertHtmlToStringComponentView />
         <hr />
-        <DecodedJwtComponent />
+        <DecodedJwtComponentView />
         <hr />
-        <SortListObjectComponent />
+        <SortListObjectComponentView />
         <hr />
-        <GetElementSizeAndPosition />
+        <GetElementSizeAndPositionView />
     </main>
 );
 
