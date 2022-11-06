@@ -1,0 +1,29 @@
+[
+    {
+        "languageCode": "en",
+        "isoCode": "en",
+        "displayName": {
+            "en": "English",
+            "es": "Inglés",
+            "fr": "Anglais"
+        }
+    },
+    {
+        "languageCode": "es",
+        "isoCode": "es",
+        "displayName": {
+            "en": "Spanish",
+            "es": "España",
+            "fr": "Espagne"
+        }
+    },
+    {
+        "languageCode": "fr",
+        "isoCode": "fr",
+        "displayName": {
+            "en": "French",
+            "es": "Francia",
+            "fr": "France"
+        }
+    }
+]

@@ -22,7 +22,7 @@ const DecodeJwt: React.FC = () => {
 
     return (
         <div>
-            <h2>Valid and Decode JWT</h2>
+            <h1>Valid and Decode JWT</h1>
             <textarea
                 className="textArea"
                 rows={20}

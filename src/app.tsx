@@ -38,6 +38,12 @@ const GetElementSizeAndPositionView = lazy(() =>
         }),
     ),
 );
+const SquidexLabelsView = lazy(() =>
+    import('./components/squidex-labels').then(({ SquidexLabels }) => ({
+        default: SquidexLabels,
+    })),
+);
+
 const App: React.FC = () => (
     <main>
         <DownloadFileComponentView />
@@ -51,6 +57,8 @@ const App: React.FC = () => (
         <SortListObjectComponentView />
         <hr />
         <GetElementSizeAndPositionView />
+        <hr />
+        <SquidexLabelsView />
     </main>
 );
 

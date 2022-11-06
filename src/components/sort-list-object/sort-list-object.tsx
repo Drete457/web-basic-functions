@@ -36,7 +36,7 @@ const SortListObject: React.FC = () => {
 
     return (
         <div>
-            <h2>Sort List Object</h2>
+            <h1>Sort List Object</h1>
             <p>Select one of the options to sort the list</p>
             <select value={sortedListSelect} onChange={handleSortList}>
                 <option value="id">Id</option>

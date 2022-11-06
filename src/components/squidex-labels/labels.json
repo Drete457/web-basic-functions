@@ -1,0 +1,26 @@
+[
+    {
+        "key": "example1",
+        "text": {
+            "en": "Example 1 of what can be shown",
+            "es": "Ejemplo 1 de lo que se puede mostrar",
+            "fr": "Exemple 1 de ce qui peut être montré"
+        }
+    },
+    {
+        "key": "example2",
+        "text": {
+            "en": "and no idea comes to mind, get your head to ideas!",
+            "es": "y no se te ocurre ninguna idea, ponte a pensar!",
+            "fr": "et aucune idée ne vous vient à l'esprit, faites le plein d'idées !"
+        }
+    },
+    {
+        "key": "example3",
+        "text": {
+            "en": "The sage makes his character broad, pure, so that he can support other men and things.",
+            "es": "El sabio hace su carácter amplio, puro, para que pueda sostener a otros hombres y cosas.",
+            "fr": "Le sage rend son caractère large, pur, afin qu'il puisse supporter d'autres hommes et choses."
+        }
+    }
+]
