@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { apiLinkAndErrorHandling } from './lib/api';
 
 const ConvertHtmlToStringComponentView = lazy(() =>
     import('./components/convert-html-to-string').then(
@@ -44,6 +45,14 @@ const SquidexLabelsView = lazy(() =>
     })),
 );
 
+// for this component is necessary to give the base url of the api, in this case is dog.ceo
+apiLinkAndErrorHandling({ baseUrl: 'https://dog.ceo/api' });
+const GetDogImageView = lazy(() =>
+    import('./components/get-dog-image').then(({ GetDogImage }) => ({
+        default: GetDogImage,
+    })),
+);
+
 const App: React.FC = () => (
     <main>
         <DownloadFileComponentView />
@@ -59,6 +68,8 @@ const App: React.FC = () => (
         <GetElementSizeAndPositionView />
         <hr />
         <SquidexLabelsView />
+        <hr />
+        <GetDogImageView />
     </main>
 );
 
