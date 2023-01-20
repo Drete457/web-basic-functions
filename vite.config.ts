@@ -1,7 +1,8 @@
 import { defineConfig, loadEnv } from 'vite';
-import react from '@vitejs/plugin-react';
-import removeConsole from 'vite-plugin-remove-console';
 import * as path from 'path';
+import removeConsole from 'vite-plugin-remove-console';
+import react from '@vitejs/plugin-react-swc';
+import viteBuildConfiguration from './vite-build-configuration';
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -20,23 +21,6 @@ export default ({ mode }) => {
         server: {
             port: portToUserNumber,
         },
-        build: {
-            lib: {
-                entry: path.resolve(__dirname, 'src/lib/index.ts'),
-                name: 'web-basic-functions',
-                fileName: format => `web-basic-functions.${format}.js`,
-            },
-            chunkSizeWarningLimit: 350,
-            minify: 'esbuild',
-            rollupOptions: {
-                external: ['react', 'react-dom'],
-                output: {
-                    globals: {
-                        react: 'React',
-                        'react-dom': 'ReactDOM',
-                    },
-                },
-            },
-        },
+        build: viteBuildConfiguration(),
     });
 };

@@ -29,7 +29,8 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "pretty": "prettier --write \"src/**/*.{css,js,json,ts,tsx}\"",
-        "update": "yarn-upgrade-all"
+        "update": "yarn-upgrade-all",
+        "upgrade": "yarn upgrade-interactive"
     },
     "keywords": [
         "frontend",
@@ -40,12 +41,12 @@
         "typescript-functions"
     ],
     "dependencies": {
-        "autoprefixer": "^10.4.0",
-        "axios": "^1.1.3",
+        "autoprefixer": "^10.4.13",
+        "axios": "^1.2.1",
         "np": "^7.6.2",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0",
-        "react-router-dom": "^6.2.1"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.5.0"
     },
     "devDependencies": {
         "@types/node": "^18.8.5",
@@ -53,7 +54,7 @@
         "@types/react-dom": "^18.0.6",
         "@typescript-eslint/eslint-plugin": "^5.40.0",
         "@typescript-eslint/parser": "^5.40.0",
-        "@vitejs/plugin-react": "^2.1.0",
+        "@vitejs/plugin-react-swc": "^3.0.1",
         "eslint": "^8.25.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
@@ -65,9 +66,9 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "prettier": "^2.7.1",
         "regenerator-runtime": "^0.13.10",
-        "typescript": "^4.8.4",
-        "vite": "^3.1.8",
-        "vite-plugin-remove-console": "^1.1.0",
+        "typescript": "^4.9.4",
+        "vite": "^4.0.4",
+        "vite-plugin-remove-console": "^1.3.0",
         "yarn-upgrade-all": "^0.7.1"
     }
 }
