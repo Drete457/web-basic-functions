@@ -2,6 +2,11 @@ import { lazy } from 'react';
 import routesPath from './routes-path';
 
 /* A way to lazy load the components and routing the application. */
+const MainPageView = lazy(() =>
+    import('@/components/main-page').then(({ MainPage }) => ({
+        default: MainPage,
+    })),
+);
 const ConvertHtmlToStringComponentView = lazy(() =>
     import('@/components/convert-html-to-string').then(
         ({ ConvertHtmlToStringComponent }) => ({
@@ -58,6 +63,11 @@ interface RoutingProps {
 }
 
 const routing: ReadonlyArray<RoutingProps> = [
+    {
+        path: `${routesPath.mainPage.url}`,
+        name: `${routesPath.mainPage.name}`,
+        component: MainPageView,
+    },
     {
         path: `${routesPath.convertHtmlToString.url}`,
         name: `${routesPath.convertHtmlToString.name}`,
