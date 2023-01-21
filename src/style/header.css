@@ -1,0 +1,21 @@
+.header-style {
+    background-color: #B2B2F8;
+    padding: 0 1rem;
+}
+
+.active-link {
+    background-color: #d1e2f3ad;
+    border-radius: 1rem;
+    color: #800080;
+}
+
+.disabled-link {
+    background-color: #EFEFFD;
+    border-radius: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.active-link, .disabled-link {
+    padding: 0.5rem;
+}

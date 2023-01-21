@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { routing, routesPath } from '@/routing';
+import '@/style/body.css';
 
 const Loading = lazy(() =>
     import('@/components/loading').then(module => ({
@@ -9,31 +10,29 @@ const Loading = lazy(() =>
 );
 
 const Body: React.FC = () => (
-    <main>
-        <BrowserRouter>
-            <Suspense fallback={<Loading />}>
-                <Routes>
-                    {routing.map(route => (
-                        <Route
-                            key={route.name}
-                            path={route.path}
-                            element={
-                                <route.component
-                                    key={route.name}
-                                    type={null}
-                                    props=""
-                                />
-                            }
-                        />
-                    ))}
+    <main className="body-style">
+        <Suspense fallback={<Loading />}>
+            <Routes>
+                {routing.map(route => (
                     <Route
-                        key="*"
-                        path="*"
-                        element={<Navigate to={routesPath.mainPage.url} />}
+                        key={route.name}
+                        path={route.path}
+                        element={
+                            <route.component
+                                key={route.name}
+                                type={null}
+                                props=""
+                            />
+                        }
                     />
-                </Routes>
-            </Suspense>
-        </BrowserRouter>
+                ))}
+                <Route
+                    key="*"
+                    path="*"
+                    element={<Navigate to={routesPath.mainPage.url} />}
+                />
+            </Routes>
+        </Suspense>
     </main>
 );
 

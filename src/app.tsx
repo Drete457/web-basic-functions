@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { apiLinkAndErrorHandling } from './lib/api';
 
 const Header = lazy(() =>
@@ -15,11 +16,11 @@ const Footer = lazy(() =>
 apiLinkAndErrorHandling({ baseUrl: 'https://dog.ceo/api' });
 
 const App: React.FC = () => (
-    <>
+    <BrowserRouter>
         <Header />
         <Body />
         <Footer />
-    </>
+    </BrowserRouter>
 );
 
 export default App;
