@@ -1,5 +1,5 @@
 const Body: React.FC = () => {
-    return <p>Body</p>;
+    return <main>Body</main>;
 };
 
 export default Body;
