@@ -1,0 +1,15 @@
+:root {
+    --maximum-blue-purple: #b2b2f8;
+    --azureish-white: #d1e2f3ad;
+    --alice-blue: #efeffd;
+    --patriarch: #800080;
+    --black: #000;
+}
+
+body {
+    background-color: var(--maximum-blue-purple);
+}
+
+.hide-element {
+    display: none;
+}
