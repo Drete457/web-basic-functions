@@ -2,8 +2,9 @@
     bottom: 0;
     color: var(--patriarch);
     display: flex;
+    font-size: large;
     justify-content: center;
-    margin: 1rem;
+    padding: 1rem;
     position: fixed;
     width: 100%;
 }

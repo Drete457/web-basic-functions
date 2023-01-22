@@ -14,19 +14,21 @@
     background-color: var(--azureish-white);
     border-radius: 1rem;
     cursor: not-allowed;
-    color: var(--patriarch);
+    font-size: larger;
+    font-weight: 700;
 }
 
 .disabled-link {
     background-color: var(--alice-blue);
     border-radius: 1rem;
-    color: var(--black);
-    text-decoration: none;
+    color: var(--patriarch);
+    font-size: large;
 }
 
 .active-link,
 .disabled-link {
     padding: 0.5rem;
+    text-decoration: none;
 }
 
 .dropdown-button {
