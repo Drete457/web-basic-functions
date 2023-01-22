@@ -1,5 +1,13 @@
 .footer-style {
     bottom: 0;
+    color: var(--patriarch);
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
     position: fixed;
     width: 100%;
+}
+
+.licence-link {
+    margin: 0 1rem;
 }
