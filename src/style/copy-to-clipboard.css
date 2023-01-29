@@ -1,0 +1,45 @@
+.input-box {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0.1rem 4rem 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 1.1rem;
+    position: relative;
+    width: 100%;
+}
+
+.copy-button {
+    background-color: var(--alice-blue);
+    border: none;
+    border-radius: 1rem;
+    color: var(--patriarch);
+    font-size: large;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.copy-button:disabled {
+    background-color: var(--azureish-white);
+    color: var(--patriarch);
+}
+
+.copy-button:hover {
+    background-color: var(--azureish-white);
+}
+
+.result {
+    background-color: var(--azureish-white);
+    border-radius: 1rem;
+    color: var(--patriarch);
+    font-size: large;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    word-wrap: break-word;
+}

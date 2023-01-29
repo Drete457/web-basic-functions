@@ -1,4 +1,5 @@
 import copyIcon from '@/assets/icons/copy.svg';
+import { copyToClipboard } from '@/lib';
 import '@/style/main-page.css';
 
 const MainPage: React.FC = () => {
@@ -13,7 +14,7 @@ const MainPage: React.FC = () => {
             const titleOfTheGrandparent =
                 target.parentElement.parentElement.title;
 
-            navigator.clipboard.writeText(titleOfTheGrandparent);
+            copyToClipboard(titleOfTheGrandparent);
         }
     };
 
