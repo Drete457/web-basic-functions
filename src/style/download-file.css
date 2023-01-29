@@ -1,0 +1,15 @@
+.download-button {
+    background-color: var(--azureish-white);
+    border: none;
+    border-radius: 1rem;
+    color: var(--patriarch);
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.download-button:hover {
+    background-color: var(--maximum-blue-purple);
+    color: var(--alice-blue);
+}

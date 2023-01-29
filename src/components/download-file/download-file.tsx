@@ -1,4 +1,5 @@
 import { downloadFile } from '@/lib';
+import '@/style/download-file.css';
 
 const handleDownloadFile = () => {
     const fileName = 'test_file';
@@ -14,7 +15,12 @@ const handleDownloadFile = () => {
 const DownloadFile: React.FC = () => (
     <section>
         <h1>Download test file</h1>
-        <button type="button" onClick={handleDownloadFile}>
+
+        <button
+            type="button"
+            onClick={handleDownloadFile}
+            className="download-button"
+        >
             Download file test
         </button>
     </section>
