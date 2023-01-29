@@ -4,9 +4,7 @@ const decodeJwt = (token: string): object => {
     const base64Url = token?.split('.')[1];
     const base64 = base64Url?.replace(/-/g, '+').replace(/_/g, '/');
 
-    if (!base64) {
-        return { result: '' };
-    }
+    if (!base64) return { result: '' };
 
     const jsonPayload = decodeURIComponent(
         window

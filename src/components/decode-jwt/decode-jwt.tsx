@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { validToken, decodeJwt } from '@/lib';
-import './style.css';
+import '@/style/decode-jwt.css';
 
 const DecodeJwt: React.FC = () => {
     const [jwt, setJwt] = useState<string>(
@@ -8,32 +8,47 @@ const DecodeJwt: React.FC = () => {
     );
     const [decodedJwt, setDecodedJwt] = useState<string>('');
 
-    const handleJwtChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const handleJwtChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
         if (typeof event.target.value === 'string') setJwt(event.target.value);
+
+        setDecodedJwt('');
     };
 
     const handleJwtDecode = () => {
         const isValid = validToken(jwt);
+
         if (isValid) {
             const decodedJwtResult = decodeJwt(jwt);
             setDecodedJwt(JSON.stringify(decodedJwtResult, null, 2));
         }
+
+        if (!isValid) setDecodedJwt('Invalid JWT');
     };
 
     return (
         <div>
             <h1>Valid and Decode JWT</h1>
+
             <textarea
-                className="textArea"
+                className="text-area"
                 rows={20}
                 cols={25}
                 value={jwt}
                 onChange={handleJwtChange}
             />
-            <button type="button" onClick={handleJwtDecode} disabled={!jwt}>
+
+            <button
+                type="button"
+                onClick={handleJwtDecode}
+                disabled={!jwt}
+                className="decode-button"
+            >
                 Decode
             </button>
-            <pre>{decodedJwt}</pre>
+
+            <pre className={`${decodedJwt ? 'result' : 'empty'}`}>
+                {decodedJwt}
+            </pre>
         </div>
     );
 };
