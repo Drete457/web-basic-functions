@@ -14,3 +14,17 @@ body {
 .hide-element {
     display: none;
 }
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-top: 2rem;
+}
+

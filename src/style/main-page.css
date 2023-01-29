@@ -1,0 +1,28 @@
+.description-list {
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.starting-list {
+    padding-left: 2rem;
+    margin-top: 1rem;
+    list-style-type: number;
+}
+
+.starting-list li button {
+    background-color: transparent;
+    margin-left: 1rem;
+}
+
+.starting-list li button:hover {
+    background-color: var(--azureish-white);
+}
+
+.description-list li,
+.starting-list li {
+    margin: 1rem 0;
+}
+
+.copy-icon {
+   width: 1.5rem;
+}

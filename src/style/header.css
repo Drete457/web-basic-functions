@@ -88,31 +88,26 @@
     left: 0;
 }
 
-.menu-hamburger span:nth-child(1),
-.menu-hamburger span:nth-child(2) {
+.menu-hamburger :is(span:nth-child(1), span:nth-child(2)) {
     top: 0;
 }
 
-.menu-hamburger span:nth-child(3),
-.menu-hamburger span:nth-child(4) {
+.menu-hamburger :is(span:nth-child(3), span:nth-child(4)) {
     top: 1.2rem;
 }
 
-.menu-hamburger span:nth-child(5),
-.menu-hamburger span:nth-child(6) {
+.menu-hamburger :is(span:nth-child(5), span:nth-child(6)) {
     top: 2.4rem;
 }
 
-.menu-hamburger.open span:nth-child(1),
-.menu-hamburger.open span:nth-child(6) {
+.menu-hamburger.open :is(span:nth-child(1), span:nth-child(6)) {
     transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
 
-.menu-hamburger.open span:nth-child(2),
-.menu-hamburger.open span:nth-child(5) {
+.menu-hamburger.open :is(span:nth-child(2), span:nth-child(5)) {
     transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
