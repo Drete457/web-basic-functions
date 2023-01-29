@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { convertHtmlToString } from '@/lib';
+import '@/style/convert-html-to-string.css';
 
 const ConvertHtmlToString: React.FC = () => {
     const exampleHtml = `<!DOCTYPE html><html><body><h4>My Text Html Title</h4><p>My Text Html Paragraph</p></body></html>`;
@@ -19,16 +20,21 @@ const ConvertHtmlToString: React.FC = () => {
                 dangerouslySetInnerHTML={{
                     __html: exampleHtml,
                 }}
+                className="example-html"
             />
+
             <button
                 type="button"
                 onClick={handleConvertHtmlToString}
                 disabled={!!resultOfTheConversion}
+                className="convert-button"
             >
                 Convert Html to String
             </button>
-            <p hidden={!resultOfTheConversion}>
-                Text converted with success {resultOfTheConversion}
+
+            <p hidden={!resultOfTheConversion} className="result">
+                Text converted with success:
+                {resultOfTheConversion}
             </p>
         </section>
     );

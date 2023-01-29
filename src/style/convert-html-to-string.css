@@ -1,0 +1,37 @@
+.example-html {
+    border: 0.1rem solid var(--patriarch);
+    color: #000;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+.convert-button {
+    background-color: var(--alice-blue);
+    border: none;
+    border-radius: 1rem;
+    color: var(--patriarch);
+    font-size: large;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.convert-button:disabled {
+    background-color: var(--azureish-white);
+    color: var(--patriarch);
+}
+
+.convert-button:hover {
+    background-color: var(--azureish-white);
+}
+
+.result {
+    background-color: var(--azureish-white);
+    border-radius: 1rem;
+    color: var(--patriarch);
+    font-size: large;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    word-wrap: break-word;
+}
