@@ -26,7 +26,7 @@ const DecodeJwt: React.FC = () => {
     };
 
     return (
-        <div>
+        <section>
             <h1>Valid and Decode JWT</h1>
 
             <textarea
@@ -49,7 +49,7 @@ const DecodeJwt: React.FC = () => {
             <pre className={`${decodedJwt ? 'result' : 'empty'}`}>
                 {decodedJwt}
             </pre>
-        </div>
+        </section>
     );
 };
 

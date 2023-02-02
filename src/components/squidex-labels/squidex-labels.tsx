@@ -7,6 +7,7 @@ import {
 } from '@/lib';
 import languages from './languages.json';
 import labels from './labels.json';
+import '@/style/squidex-labels.css';
 
 const SquidexLabels: React.FC = () => {
     // give the label key and return the translated label
@@ -36,20 +37,35 @@ const SquidexLabels: React.FC = () => {
     };
 
     return (
-        <div>
+        <section>
             <h1>Squidex Labels</h1>
-            <p>Select one of the options to change the language displayed</p>
-            <select value={defaultLanguage} onChange={handleLanguageSelect}>
-                {languagesList.map(language => (
-                    <option key={language.key} value={language.key}>
-                        {language.text[defaultLanguage]}
-                    </option>
-                ))}
-            </select>
-            <p>{t('example1')}</p>
-            <p>{t('example2')}</p>
-            <p>{t('example3')}</p>
-        </div>
+
+            <section className="sort-option_explanation">
+                <p className="sort-option_text">{t('description')}</p>
+
+                <select
+                    value={defaultLanguage}
+                    onChange={handleLanguageSelect}
+                    className="sort-option_select"
+                >
+                    {languagesList.map(language => (
+                        <option
+                            key={language.key}
+                            value={language.key}
+                            className="sort-option_select_option"
+                        >
+                            {language.text[defaultLanguage]}
+                        </option>
+                    ))}
+                </select>
+            </section>
+
+            <p className="example1">{t('example1')}</p>
+
+            <p className="example2">{t('example2')}</p>
+
+            <p className="example3">{t('example3')}</p>
+        </section>
     );
 };
 

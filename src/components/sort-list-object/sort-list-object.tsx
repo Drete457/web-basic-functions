@@ -37,7 +37,7 @@ const SortListObject: React.FC = () => {
     };
 
     return (
-        <div>
+        <section>
             <h1>Sort List Object</h1>
 
             <section className="sort-option_explanation">
@@ -69,7 +69,7 @@ const SortListObject: React.FC = () => {
                     </pre>
                 ))}
             </section>
-        </div>
+        </section>
     );
 };
 

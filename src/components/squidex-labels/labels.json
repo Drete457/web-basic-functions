@@ -1,5 +1,13 @@
 [
     {
+        "key": "description",
+        "text": {
+            "en": "Select one of the options to change the language displayed",
+            "es": "Selecciona una de las opciones para cambiar el idioma mostrado",
+            "fr": "Sélectionnez l'une des options pour changer la langue affichée"
+        }
+    },
+    {
         "key": "example1",
         "text": {
             "en": "Example 1 of what can be shown",
