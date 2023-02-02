@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { sortListObject } from '@/lib';
+import '@/style/sort-list-object.css';
 
 interface List {
     id: number;
@@ -20,6 +21,7 @@ const listExample: Array<List> = [
 ];
 
 const SortListObject: React.FC = () => {
+    const option = ['id', 'name', 'age'];
     const [list, setList] = useState<ReadonlyArray<List>>(listExample);
     const [sortedListSelect, setSortedListSelect] = useState<string>('id');
 
@@ -37,15 +39,36 @@ const SortListObject: React.FC = () => {
     return (
         <div>
             <h1>Sort List Object</h1>
-            <p>Select one of the options to sort the list</p>
-            <select value={sortedListSelect} onChange={handleSortList}>
-                <option value="id">Id</option>
-                <option value="name">Name</option>
-                <option value="age">Age</option>
-            </select>
-            {list.map(obj => (
-                <pre key={obj.id}>{JSON.stringify(obj)}</pre>
-            ))}
+
+            <section className="sort-option_explanation">
+                <p className="sort-option_text">
+                    Select one of the options to sort the list
+                </p>
+
+                <select
+                    value={sortedListSelect}
+                    onChange={handleSortList}
+                    className="sort-option_select"
+                >
+                    {option.map(optionValue => (
+                        <option
+                            key={optionValue}
+                            value={optionValue}
+                            className="sort-option_select_option"
+                        >
+                            {optionValue.toUpperCase()}
+                        </option>
+                    ))}
+                </select>
+            </section>
+
+            <section className="result">
+                {list.map(obj => (
+                    <pre key={obj.id} className="result_pre">
+                        {JSON.stringify(obj)}
+                    </pre>
+                ))}
+            </section>
         </div>
     );
 };
