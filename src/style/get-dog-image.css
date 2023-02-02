@@ -1,0 +1,42 @@
+.button-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.download-button {
+    background-color: var(--azureish-white);
+    border: none;
+    border-radius: 1rem;
+    color: var(--patriarch);
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+.download-button:hover {
+    background-color: var(--maximum-blue-purple);
+    color: var(--alice-blue);
+}
+
+.download-button:disabled {
+    background-color: var(--azureish-white);
+    color: var(--patriarch);
+    cursor: not-allowed;
+}
+
+.show-image {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.show-image img {
+    border-radius: 1rem;
+    margin: 1rem 0;
+    position: absolute;
+}
+

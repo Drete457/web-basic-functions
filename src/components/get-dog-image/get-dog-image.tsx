@@ -1,41 +1,44 @@
+import { lazy } from 'react';
 import { useGetDogImage } from '@/lib/api';
-import './style.css';
+import '@/style/get-dog-image.css';
+
+const Loading = lazy(() =>
+    import('@/components/loading').then(module => ({
+        default: module.Loading,
+    })),
+);
 
 const GetDogImage: React.FC = () => {
-    const { isLoading, error, data, setData, execute } = useGetDogImage();
-
-    const handleDeleteDogImage = () => {
-        setData({
-            status: '',
-            message: '',
-        });
-    };
+    const { isLoading, error, data, execute } = useGetDogImage();
 
     return (
         <section>
-            <h2>Get Dog Image</h2>
+            <h1>Get Dog Image</h1>
 
-            <button
-                type="button"
-                onClick={execute}
-                hidden={data.message !== ''}
-            >
-                Get Dog Image
-            </button>
-            <button
-                type="button"
-                onClick={handleDeleteDogImage}
-                hidden={data.message === '' || isLoading}
-            >
-                Delete Dog Image
-            </button>
+            <section className="button-component">
+                <button
+                    type="button"
+                    onClick={execute}
+                    className="download-button"
+                    disabled={isLoading}
+                >
+                    Get Dog Image
+                </button>
+            </section>
 
-            <div className="loader" hidden={!isLoading}></div>
+            <div hidden={!isLoading}>
+                <Loading />
+            </div>
 
-            <div className="show-image">
-                <p hidden={isLoading || data.status !== 'success'}>
-                    <img src={data.message} alt="dog" />
-                </p>
+            <div hidden={data.message === ''}>
+                <div className="show-image">
+                    <img
+                        src={data.message || ''}
+                        alt="dog"
+                        loading="lazy"
+                        hidden={isLoading}
+                    />
+                </div>
             </div>
 
             <p hidden={error === null}>{error?.message}</p>

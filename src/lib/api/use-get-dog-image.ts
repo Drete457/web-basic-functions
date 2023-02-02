@@ -1,6 +1,11 @@
 import { useState, useCallback, Dispatch, SetStateAction } from 'react';
 import { get, URLS } from '@/lib/api';
 
+const initialState = Object.freeze({
+    message: '',
+    status: '',
+});
+
 interface ImageDogResponse {
     message: string;
     status: string;
@@ -9,35 +14,35 @@ interface ImageDogResponse {
 const getDogImage = (
     setData: Dispatch<SetStateAction<ImageDogResponse>>,
     setError: Dispatch<SetStateAction<Error | null>>,
+    setIsLoading: Dispatch<SetStateAction<boolean>>,
 ) => {
     const url: string = URLS.imageDog;
 
     get({ url })
-        .then(res => setData(res.data))
-        .catch(err => setError(err));
+        .then(res => {
+            setData(res.data);
+            setIsLoading(false);
+        })
+        .catch(err => {
+            setError(err);
+            setIsLoading(false);
+        });
 };
 
 const useGetDogImage = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
-    const [data, setData] = useState<ImageDogResponse>({
-        message: '',
-        status: '',
-    });
+    const [data, setData] = useState<ImageDogResponse>(initialState);
 
     const execute = async () => {
-        try {
-            setIsLoading(true);
-            await getDogImage(setData, setError);
-        } finally {
-            setTimeout(() => setIsLoading(false), 2000);
-        }
+        setData(initialState);
+        setIsLoading(true);
+        await getDogImage(setData, setError, setIsLoading);
     };
 
     return {
         isLoading,
         data,
-        setData,
         error,
         execute: useCallback(execute, []),
     };

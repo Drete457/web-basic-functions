@@ -15,6 +15,7 @@ const ConvertHtmlToString: React.FC = () => {
     return (
         <section>
             <h1>Example Html Converted to String</h1>
+
             <div
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
