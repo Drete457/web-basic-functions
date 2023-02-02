@@ -1,6 +1,6 @@
 import { LegacyRef, useRef, useState } from 'react';
 import { getElementSizeAndPosition } from '@/lib';
-import './style.css';
+import '@/style/get-element-size-and-position.css';
 
 enum ElementPosition {
     left = 'ltr',
@@ -26,7 +26,7 @@ const GetElementSizeAndPosition: React.FC = () => {
             const { width, height, positionX, positionY } =
                 getElementSizeAndPosition(element.current);
             setElementInformation(
-                `width: ${width}, height: ${height}, positionX: ${positionX}, positionY: ${positionY}`,
+                `Width: ${width}, Height: ${height}, PositionX: ${positionX}, PositionY: ${positionY}`,
             );
         }
     };
@@ -34,23 +34,36 @@ const GetElementSizeAndPosition: React.FC = () => {
     return (
         <section>
             <h1>Get Element Size and Position</h1>
-            <p>
+
+            <p className="description">
                 Get the width, height, positionX and positionY of the element.
             </p>
-            <pre>Element information: {elementInformation}</pre>
-            <button type="button" onClick={handleResizeInformation}>
-                Size and Position of the element
-            </button>
-            <button
-                type="button"
-                onClick={handleElementPosition}
-                className="move-button"
-            >
-                Move element to the other side
-            </button>
+
+            <pre className="element_information">
+                Element information: {elementInformation}
+            </pre>
+
+            <section className="buttons">
+                <button
+                    type="button"
+                    onClick={handleResizeInformation}
+                    className="size_and_position-button"
+                >
+                    Size and Position of the element
+                </button>
+
+                <button
+                    type="button"
+                    onClick={handleElementPosition}
+                    className="move-button"
+                >
+                    Move element to the other side
+                </button>
+            </section>
+
             <section dir={positionOfTheElement}>
                 <div ref={element} className="resize">
-                    Resize me
+                    Resize me on the bottom right corner
                 </div>
             </section>
         </section>

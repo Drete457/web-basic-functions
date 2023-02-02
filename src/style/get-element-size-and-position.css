@@ -1,0 +1,47 @@
+.description {
+    margin-top: 1rem;
+}
+
+.element_information {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.size_and_position-button,
+.move-button {
+    background-color: var(--azureish-white);
+    border: none;
+    border-radius: 1rem;
+    color: var(--patriarch);
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+}
+
+.size_and_position-button:hover,
+.move-button:hover {
+    background-color: var(--maximum-blue-purple);
+    color: var(--alice-blue);
+}
+
+.move-button {
+    margin-left: 1rem;
+}
+
+.resize {
+    border: 0.1rem solid;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 10rem;
+    margin: 1rem;
+    overflow: auto;
+    resize: both;
+    width: 15rem;
+}
