@@ -35,7 +35,9 @@
     font-weight: 800;
 }
 
-.example1, .example2, .example3 {
+.example1,
+.example2,
+.example3 {
     background-color: var(--azureish-white);
     border-radius: 1rem;
     box-sizing: border-box;

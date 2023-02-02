@@ -53,14 +53,14 @@
 .menu-hamburger {
     height: 3rem;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     width: 4rem;
     -o-transform: rotate(0deg);
-    -o-transition: .5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     -moz-transform: rotate(0deg);
-    -moz-transition: .5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
     -webkit-transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
 }
 
 .menu-hamburger span {
@@ -68,14 +68,14 @@
     height: 0.3rem;
     position: absolute;
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     width: 2rem;
     -moz-transform: rotate(0deg);
-    -moz-transition: .25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
     -o-transform: rotate(0deg);
-    -o-transition: .25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
     -webkit-transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
 }
 
 .menu-hamburger span:nth-child(even) {

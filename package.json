@@ -30,7 +30,9 @@
         "build": "tsc && vite build",
         "pretty": "prettier --write \"src/**/*.{css,js,json,ts,tsx}\"",
         "update": "yarn-upgrade-all",
-        "upgrade": "yarn upgrade-interactive"
+        "upgrade": "yarn upgrade-interactive",
+        "prettyBuild": "prettier --write \"src/**/*.{css,js,json,ts,tsx}\" && tsc && vite build",
+        "publish": "np"
     },
     "keywords": [
         "frontend",
